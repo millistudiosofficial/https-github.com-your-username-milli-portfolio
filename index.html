@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SUBHANI BASHA | Filmmaker</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&family=Outfit:wght@400;700&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Inter:wght@300;500;700&family=Outfit:wght@400;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -18,13 +18,23 @@
     <div class="glow-orb orb-2"></div>
 
     <nav class="navbar">
-        <div class="logo">SB.</div>
-        <ul class="nav-links">
+        <div class="logo-container">
+            <img src="logo.webp" alt="Subhani Basha" class="logo">
+            <span class="logo-text">Bablu Shaik</span>
+        </div>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-links" id="nav-links">
             <li><a href="#hero">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#projects">Projects</a></li>
+            <li><a href="#reels">Reels</a></li>
             <li><a href="#posters">Posters</a></li>
             <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
@@ -46,8 +56,8 @@
         <div class="glass-card about-card float-slow">
             <h2>About Me</h2>
             <p class="punchy-bio">
-                Visionary filmmaker and founder of <strong>Milli Studios</strong>. Delivering <strong>4K
-                    Excellence</strong> as a Director and DOP. A track record of 6 projects in one year, including the
+                Visionary filmmaker and CEO of <strong>Milli Studios</strong>. Delivering <strong>4K
+                    Excellence</strong> as a Director, Cinematographer, and Editor. A track record of 6 projects in one year, including the
                 acclaimed <em>"Oo Katha"</em>. Direct, punchy, and relentless in the pursuit of cinematic perfection.
             </p>
         </div>
@@ -67,30 +77,32 @@
     <!-- Tools Section -->
     <section id="tools" class="tools-section">
         <h2 class="section-title"><strong>Tools</strong></h2>
-        <div class="tools-grid">
-            <div class="tool-card">
-                <img src="https://img.icons8.com/color/144/adobe-premiere-pro--v1.png" alt="Premiere Pro">
-                <span>Premiere Pro</span>
-            </div>
-            <div class="tool-card">
-                <img src="https://img.icons8.com/color/144/adobe-photoshop--v1.png" alt="Photoshop">
-                <span>Photoshop</span>
-            </div>
-            <div class="tool-card">
-                <img src="https://img.icons8.com/color/144/adobe-after-effects--v1.png" alt="After Effects">
-                <span>After Effects</span>
-            </div>
-            <div class="tool-card">
-                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/37/CapCut_logo.svg/1200px-CapCut_logo.svg.png" alt="Capcut">
-                <span>Capcut</span>
-            </div>
-            <div class="tool-card">
-                <img src="https://img.icons8.com/color/144/adobe-illustrator--v1.png" alt="Illustrator">
-                <span>Illustrator</span>
-            </div>
-            <div class="tool-card">
-                <img src="https://img.icons8.com/color/144/canva.png" alt="Canva">
-                <span>Canva</span>
+        <div class="glass-card tools-folder">
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <img src="https://img.icons8.com/color/144/adobe-premiere-pro--v1.png" alt="Premiere Pro">
+                    <span>Premiere Pro</span>
+                </div>
+                <div class="tool-card">
+                    <img src="https://img.icons8.com/color/144/adobe-photoshop--v1.png" alt="Photoshop">
+                    <span>Photoshop</span>
+                </div>
+                <div class="tool-card">
+                    <img src="https://img.icons8.com/color/144/adobe-after-effects--v1.png" alt="After Effects">
+                    <span>After Effects</span>
+                </div>
+                <div class="tool-card">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/37/CapCut_logo.svg/1200px-CapCut_logo.svg.png" alt="Capcut">
+                    <span>Capcut</span>
+                </div>
+                <div class="tool-card">
+                    <img src="https://img.icons8.com/color/144/adobe-illustrator--v1.png" alt="Illustrator">
+                    <span>Illustrator</span>
+                </div>
+                <div class="tool-card">
+                    <img src="https://img.icons8.com/color/144/canva.png" alt="Canva">
+                    <span>Canva</span>
+                </div>
             </div>
         </div>
     </section>
@@ -173,28 +185,28 @@
         <h2 class="section-title">Reels</h2>
         <div class="reels-grid">
             <div class="reel-card">
-                <video src="reels/reel1.mp4.mp4" autoplay loop muted playsinline></video>
+                <video src="reels/reel1.mp4.mp4" autoplay loop muted playsinline controls></video>
             </div>
             <div class="reel-card">
-                <video src="reels/reel2.mp4.mp4" autoplay loop muted playsinline></video>
+                <video src="reels/reel2.mp4.mp4" autoplay loop muted playsinline controls></video>
             </div>
             <div class="reel-card">
-                <video src="reels/reel3.mp4.mp4" autoplay loop muted playsinline></video>
+                <video src="reels/reel3.mp4.mp4" autoplay loop muted playsinline controls></video>
             </div>
             <div class="reel-card">
-                <video src="reels/reel4.mp4.mp4" autoplay loop muted playsinline></video>
+                <video src="reels/reel4.mp4.mp4" autoplay loop muted playsinline controls></video>
             </div>
             <div class="reel-card">
-                <video src="reels/reel5.mp4.mp4" autoplay loop muted playsinline></video>
+                <video src="reels/reel5.mp4.mp4" autoplay loop muted playsinline controls></video>
             </div>
             <div class="reel-card">
-                <video src="reels/reel6.mp4.mp4" autoplay loop muted playsinline></video>
+                <video src="reels/reel6.mp4.mp4" autoplay loop muted playsinline controls></video>
             </div>
             <div class="reel-card">
-                <video src="reels/reel7.mp4.mp4" autoplay loop muted playsinline></video>
+                <video src="reels/reel7.mp4.mp4" autoplay loop muted playsinline controls></video>
             </div>
             <div class="reel-card">
-                <video src="reels/reel8.mp4.mp4" autoplay loop muted playsinline></video>
+                <video src="reels/reel8.mp4.mp4" autoplay loop muted playsinline controls></video>
             </div>
         </div>
     </section>
@@ -238,6 +250,24 @@
                     <img src="poster8.jpg.jpg" alt="Poster 8">
                     <a href="https://www.instagram.com/p/DT76gwPiLUG/?igsh=Y2Mwem82bm1ybm52" target="_blank" class="insta-link">View on Instagram</a>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="glass-card contact-card">
+            <form action="#" method="POST" class="contact-form">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+            <div class="social-links">
+                <a href="https://www.instagram.com/__.bablu.__shaik/" target="_blank">Instagram</a>
+                <a href="https://wa.me/918978959557" target="_blank">WhatsApp</a>
+                <a href="mailto:contact@millistudios.com">Email Me</a>
             </div>
         </div>
     </section>

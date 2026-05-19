@@ -15,13 +15,18 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
 body {
     background-color: var(--bg-color);
     color: var(--text-primary);
     font-family: var(--font-body);
     overflow-x: hidden;
-    scroll-behavior: smooth;
     position: relative;
+    width: 100%;
 }
 
 
@@ -33,8 +38,8 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     background: radial-gradient(circle at center, rgba(255,255,255,0.05) 0%, transparent 80%);
     z-index: -2;
 }
@@ -113,7 +118,7 @@ body {
 
 .logo-text {
     font-family: 'Dancing Script', cursive;
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: #fff;
     letter-spacing: 1.5px;
     animation: textGlowFloat 3s ease-in-out infinite alternate, colorCycle 8s linear infinite;
@@ -251,15 +256,18 @@ section {
     z-index: 20;
 }
 
-/* Hero */
 .hero-section {
     align-items: center;
     text-align: center;
 }
 
+.hero-content {
+    transition: transform 0.15s ease-out;
+}
+
 .hero-title {
     font-family: var(--font-heading);
-    font-size: clamp(3rem, 8vw, 7rem);
+    font-size: clamp(2rem, 5vw, 4.5rem);
     font-weight: 700;
     letter-spacing: 2px;
     margin-bottom: 1rem;
@@ -275,8 +283,8 @@ section {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    width: 0%;
+    transform: translate(-50%, -50%) scaleX(0);
+    width: 100%;
     height: 4px;
     background: #fff;
     box-shadow: 
@@ -286,6 +294,7 @@ section {
     border-radius: 50%;
     z-index: -1;
     animation: flareExpand 8s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite alternate;
+    will-change: transform, opacity;
 }
 
 @keyframes cinemaScale {
@@ -294,13 +303,13 @@ section {
 }
 
 @keyframes flareExpand {
-    0%, 20% { width: 0%; opacity: 0; }
-    100% { width: 130%; opacity: 1; }
+    0%, 20% { transform: translate(-50%, -50%) scaleX(0); opacity: 0; }
+    100% { transform: translate(-50%, -50%) scaleX(1.3); opacity: 1; }
 }
 
 .hero-tagline {
     font-family: 'Dancing Script', cursive;
-    font-size: 2.2rem;
+    font-size: 1.6rem;
     letter-spacing: 2px;
     margin-top: -10px;
     margin-bottom: 1.5rem;
@@ -438,7 +447,7 @@ section {
 }
 
 .offset-down {
-    transform: translateY(50px);
+    margin-top: 50px;
 }
 
 .project-card {
@@ -875,6 +884,18 @@ section {
         grid-template-columns: 1fr;
     }
     .offset-down {
-        transform: none;
+        margin-top: 0;
     }
+}
+
+/* Scroll Reveal Classes */
+.reveal-item {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.reveal-item.revealed {
+    opacity: 1;
+    transform: translateY(0);
 }

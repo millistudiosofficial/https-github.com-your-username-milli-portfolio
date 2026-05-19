@@ -1,8 +1,8 @@
 // 3D Parallax Effect for Hero Section
 document.addEventListener('mousemove', (e) => {
     const parallaxElements = document.querySelectorAll('.parallax');
-    const x = (window.innerWidth - e.pageX * 2) / 100;
-    const y = (window.innerHeight - e.pageY * 2) / 100;
+    const x = (window.innerWidth - e.clientX * 2) / 100;
+    const y = (window.innerHeight - e.clientY * 2) / 100;
 
     parallaxElements.forEach(el => {
         const speed = el.getAttribute('data-speed') || 0.05;
@@ -23,22 +23,19 @@ const observerOptions = {
 const observer = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
         if(entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
+            entry.target.classList.add('revealed');
             observer.unobserve(entry.target);
         }
     });
 }, observerOptions);
 
-document.querySelectorAll('.glass-card, .project-card').forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(30px)';
-    el.style.transition = 'opacity 0.8s ease-out, transform 0.8s ease-out';
+document.querySelectorAll('.glass-card, .project-card, .poster-card, .reel-card').forEach(el => {
+    el.classList.add('reveal-item');
     observer.observe(el);
 });
 
 // Interactive Skills Bubbles - Add slight repel effect from mouse
-const bubbles = document.querySelectorAll('.bubble');
+const bubbles = document.querySelectorAll('.skill-pill');
 document.addEventListener('mousemove', (e) => {
     const mouseX = e.clientX;
     const mouseY = e.clientY;
@@ -56,9 +53,11 @@ document.addEventListener('mousemove', (e) => {
             const repelX = -distX * 0.1;
             const repelY = -distY * 0.1;
             bubble.style.transform = `translate(${repelX}px, ${repelY}px) scale(1.05)`;
+            bubble.style.transition = 'transform 0.1s ease-out';
         } else {
             // Revert back to original float animation handling
             bubble.style.transform = '';
+            bubble.style.transition = 'transform 0.4s ease-out';
         }
     });
 });
